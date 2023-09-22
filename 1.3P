@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1.3P</title>
+    <link rel="icon" href="images/check.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/vue@3.2.19/dist/vue.js"></script>
+    <script>
+    const app = Vue.createApp({
+        data() { 
+            return {
+                userName: '',
+                userOrganisation: '',
+                userEmail: '',
+                showMessage: false
+            };
+        },
+    }
+    );
+
+    app.mount('#app');
+
+    </script>
+    <header>Welcome to my online resume!</header>
+
+    <h2>About Me</h2>
+    <p>I am currently undertaking a Bachelor of I.T. at Deakin University. I plan on majoring in Cyber Security as I'm interested in the protection of sensitive data and the way in which this can be enhanced!</p>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Job</th>
+                <th>Years of Experience</th>
+                <th>What did I like?</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>Customer service representative</th>
+                <th>1.5</th>
+                <th>Communicating with customers and helping them with their queries</th>
+            </tr>
+            <tr>
+                <th>Office Administrator</th>
+                <th>1</th>
+                <th>Managing and organising data for the company and contributing to overall business performance</th>
+            </tr>
+
+        </tbody>
+    </table>
+    <p> As an office adminstrator, I have: <br>-Allocated stock in accordance with customer orders along with generated picking slips<br>
+        -	Ensured all orders have correct quantities and price as per company basis of sale and pricing structure<br>
+        -	Produced monthly reports using Excel spread sheet functions<br>
+        -	Communicate with Warehouse staff to ensure customer shipping requirements are met<br>
+        -	Responded to Customer inquiries for pricing, product availability and technical information<br>
+        -	Managed accounts receivable and payable<br>
+        -	Reviewed and updated client correspondence file and scheduling database<br>
+        -	Suggested budgetary changes to increase company profits as well as identify solutions to any weaknesses within the company<br>
+        -	Organised files and conducted relevant research for development<br>
+        </p>
+
+    <p> As a customer service representative, I have:<br>-	Analysed internal data and customer requirements to establish quality service <br>
+        -	Liaised with patients and families in a compassionate and understanding manner<br>
+        -	Scheduled and managed appointments in a timely manner<br>
+        -	Faxed, scanned and filed documents<br>
+        -	Entered new clients in ERP system<br>
+        -	Scanned and updated all patient related correspondence and results<br>
+        -	Processed patient payments and invoices<br>
+        -	Managed patient and GP files including reviewing and actioning incoming referral and doctor letters<br>
+        -	Data entry<br>
+        </p>
+    <h2>Contact Me</h2>
+    <form>
+        <label for="name">Full name:</label>
+        <input type="text" id="name" name="name" v-model="userName">
+
+        <label for="organisation">Organisation</label>
+        <input type="text" id="organisation" name="organisation" v-model="userOrganisation">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" v-model="userEmail">
+
+        <div>
+            <p>What date did you access this site?</p>
+            <input type="date" id="accessDate" name="accessDate">
+            <div>
+            <input type="checkbox" v-model="showMessage"> Click to see what's behind the checkbox!
+            <p v-if="showMessage">Thank you for viewing my website :)</p>
+            <p></p>
+            </div>
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+
+<br>
+<br>
+<br>
+<br>
+<div id="app">
+</div>
+
+
+    </body>
+    </html>
+
+
+body {
+        display: flex;
+        flex-direction: column;
+        min-height: 90vh;
+        font: Sans-serif;
+        font-size: 20px;
+        color: black;
+        text-align: center;
+}
+
+main {
+    flex: 1;
+    padding: 1rem;
+}
+
+table {
+    border: 1px solid blackt
+}
+
+header {
+        font: Helvetica;
+        font-size: 40px;
+        background-color: darkgray;
+        color: white;
+        text-align: center;
+}
+
+
+
